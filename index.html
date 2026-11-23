@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Портфолио — разработчик сайтов и приложений</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Onest:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f3f1ec;--surface:#fff;--ink:#16181d;--muted:#5d626d;--line:#d9d6ce;--accent:#2f4bff;--accent-ink:#fff;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--bg:#12141a;--surface:#1b1e26;--ink:#eceef3;--muted:#9aa0ae;--line:#2c303b;--accent:#7b8cff;--accent-ink:#10121a}
+}
+:root[data-theme="dark"]{--bg:#12141a;--surface:#1b1e26;--ink:#eceef3;--muted:#9aa0ae;--line:#2c303b;--accent:#7b8cff;--accent-ink:#10121a}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 'Onest',system-ui,sans-serif}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:'Unbounded',system-ui,sans-serif;line-height:1.15;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:24px 0}
+header.top b{font-family:'Unbounded',sans-serif;font-weight:500;font-size:15px}
+header.top a{text-decoration:none;color:var(--muted);margin-left:20px;font-size:15px}
+header.top a:hover{color:var(--ink)}
+.hero{padding:72px 0 88px}
+.hero h1{font-size:clamp(34px,7vw,68px);font-weight:700;max-width:14ch}
+.hero p{max-width:52ch;color:var(--muted);font-size:19px;margin:28px 0 36px}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);padding:14px 26px;border-radius:999px;text-decoration:none;font-weight:500}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);margin-left:10px}
+section{padding:56px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(24px,4vw,34px);margin-bottom:32px}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+.skills h3{font-size:18px;margin-bottom:8px}
+.skills p{margin:0;color:var(--muted)}
+.work{display:block;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:36px;margin-bottom:20px;transition:border-color .2s}
+.work:hover{border-color:var(--accent)}
+.work h3{font-size:28px;margin-bottom:10px}
+.work p{margin:0 0 18px;color:var(--muted);max-width:56ch}
+.tags span{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:3px 12px;font-size:14px;margin:0 6px 6px 0;color:var(--muted)}
+.work .go{font-weight:500;color:var(--accent)}
+.work.soon{border-style:dashed;background:transparent}
+.contact p{color:var(--muted);max-width:50ch;margin:0 0 24px}
+footer{padding:32px 0 48px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+@media (max-width:560px){.btn.ghost{margin:10px 0 0}.work{padding:26px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <b>Лев</b>
+    <nav><a href="#work">Работы</a><a href="#skills">Что делаю</a><a href="#contact">Связаться</a></nav>
+  </header>
+
+  <div class="hero">
+    <h1>Делаю сайты и приложения, которыми приятно пользоваться</h1>
+    <p>Я программист. Разрабатываю сайты, веб-приложения и мобильные приложения — от идеи до запуска.</p>
+    <a class="btn" href="#work">Смотреть работы</a><a class="btn ghost" href="#contact">Написать мне</a>
+  </div>
+
+  <section id="work">
+    <h2>Работы</h2>
+    <a class="work" href="https://nopolikasa4ka-cloud.github.io/elan.github.io/" target="_blank" rel="noopener">
+      <h3>ÉLAN Nail Studio</h3>
+      <p>Демо-сайт салона маникюра для портфолио.</p>
+      <div class="tags"><span>Сайт</span><span>Онлайн-запись</span><span>Адаптивная вёрстка</span></div>
+      <span class="go">Открыть сайт</span>
+    </a>
+    <div class="work soon">
+      <h3>Следующий проект</h3>
+      <p>Здесь будет второй сайт из твоих работ.</p>
+      <div class="tags"><span>Веб-приложение</span></div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Что делаю</h2>
+    <div class="skills">
+      <div><h3>Сайты</h3><p>Лендинги и многостраничные сайты, которые быстро грузятся и хорошо выглядят на телефоне.</p></div>
+      <div><h3>Веб-приложения</h3><p>Личные кабинеты, сервисы, панели управления — с логикой и базой данных.</p></div>
+      <div><h3>Мобильные приложения</h3><p>Приложения для iOS и Android под вашу задачу.</p></div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Давайте обсудим ваш проект</h2>
+    <p>Расскажите, что нужно сделать, — отвечу в Telegram в течение дня.</p>
+    <a class="btn" href="https://t.me/levin190" target="_blank" rel="noopener">Написать в Telegram</a>
+  </section>
+
+  <footer>© 2026 Лев</footer>
+</div>
+</body>
+</html>
